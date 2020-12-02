@@ -12,6 +12,11 @@ return (
                 <Col className="p-0 md={3} sm={12}">
                 Daniel Rodriguez
                 </Col>
+                <Col className="p-0">
+                    <a href="https://docs.google.com/document/d/1AfchCIHH067YCn695NuDd5N5fg-LWpnTPd9CREj015Q/edit?usp=sharing">Resume</a>
+                    <a href="https://github.com/Daniel-Rodriguez210">Github</a>
+                    <a href="https://www.linkedin.com/in/daniel-rodriguez-73690b1b0/">LinkedIn</a>
+                </Col>
                 <Col className="p-0 d-flex justify-content-end" md={3}>
                     This website was made by Daniel Rodriguez.
                 </Col>
