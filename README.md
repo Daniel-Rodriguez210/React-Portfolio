@@ -12,3 +12,4 @@ I am currently working on a project "Bubble Thought" that I will include.
 
 Also, I wasn't able to get the submission card working to correspond with my email. 
 
+![](5.gif)
