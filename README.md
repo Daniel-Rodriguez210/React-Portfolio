@@ -1,15 +1,48 @@
-# React-Portfolio
+![GitHub license](https://img.shields.io/badge/license-MIT-orange.svg)    
 
-I have created a portfolio utilizing react for the front end of the website. 
+# React Portfolio
 
-Technologies utilized are React, HTML, JavaScript, CSS, Node. 
+# Application Does:
+* This is a full-stack portfolio displaying some of my favorite projects that I have recently completed. 
 
-I wanted to be able to show that I can create a portfolio using a more widespread library such as react. 
+# Technologies used:
+* MERN(MongoDB, Express js, React, Node js)
+* CSS , Bootstrap
+* React-Spring
 
-I was able to get the website looking the way I wanted for the most part, but still want to improve. 
+# Features
+* Digital Journal
+* User can create personal account
+* Save memories in digital form
+* Save pictures
+* Delete the journal activity
+* Show date of the activity created
+* Using Cloudinary and Multer
 
-I am currently working on a project "Bubble Thought" that I will include. 
 
-Also, I wasn't able to get the submission card working to correspond with my email. 
 
+
+
+
+# Sample web page
 ![](5.gif)
+
+
+
+ 
+ 
+# Depolyed Application
+ https://daniel-rodriguez210.github.io/React-Portfolio/
+
+
+
+# Github repository
+ https://github.com/Daniel-Rodriguez210/React-Portfolio
+
+
+
+# Contributing
+ *drod18@hotmail.com
+ 
+
+@copyright 2020
