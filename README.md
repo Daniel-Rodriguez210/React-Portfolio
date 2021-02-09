@@ -11,14 +11,9 @@
 * React-Spring
 
 # Features
-* Digital Journal
-* User can create personal account
-* Save memories in digital form
-* Save pictures
-* Delete the journal activity
-* Show date of the activity created
-* Using Cloudinary and Multer
-
+* Deployed Applications
+* About Me
+* Contact form
 
 
 
