@@ -1,94 +1,56 @@
 import React from 'react'; 
-import Content from '../components/Content';
 import Hero from '../components/Hero';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'
-import Axios from 'axios';
+import Container from 'react-bootstrap/Container';
+import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import GitHub from '../assets/images/gh1.png';
+import LinkedIn from '../assets/images/li1.png';
+
 
 class ContactPage extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: '',
-            email: '',
-            message: '',
-            disabled: false,
-            emailSent: null,
-        }
-    }
-
-    handleChange = (event) => {     
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        })
-    };
-
-    handleSubmit = (event) => {
-        event.preventDefault();
-
-        this.setState ({
-            disabled: true,
-        });
-
-        Axios.post('http://localhost:3030/api/email', this.state)
-            .then(res => {
-                if(res.data.success){
-                    this.setState({
-                        disabled: false,
-                        emailSent: true
-                    });
-                } else {
-                    this.setState({
-                        disabled: false,
-                        emailSent: false
-                    });
-                }
-                
-            })
-            .catch(err => {
-                this.setState({
-                    disabled: false,
-                    emailSent: false
-                });
-            })
-    }
 
 
     render() {
     return (
         <div>
             <Hero title={this.props.title} />
+            <Container fluid={true}>
+            <Row className="justify-content-center">
+                <Col md={6}>
+                    <Card>
+                        <Card.Body>
+                            <Card.Text>
+                                <p>Questions?</p>
+                                <p>Please contact me with any questions you may have. I would be happy to answer.</p>
+                                <p>(210)-287-2866</p>
+                                <p>drod18@hotmail.com</p>
+                            </Card.Text>
+                        </Card.Body>
 
-            <Content>
-                <Form onSubmit={this.handleSubmit}>
-                    <Form.Group>
-                        <Form.Label htmlFor="full-name">Full Name</Form.Label>
-                        <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
-                    </Form.Group>
-
-                    <Form.Group>
-                        <Form.Label htmlFor="email">Email</Form.Label>
-                        <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
-                    </Form.Group>
-
-                    <Form.Group>
-                        <Form.Label htmlFor="message">Message</Form.Label>
-                        <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
-                    </Form.Group>
-
-                    <Button className= "d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
-                        Send
-                    </Button>
-
-                    {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-                    {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
-                </Form>
-            </Content>
+                    </Card>
+                </Col>
+                <Col md={6}>
+                    <Card>
+                    <Card.Body>
+                            <Card.Text>
+                                <p>If you would like to take a look at additional information please examine my LinkedIn, GitHub, and Resume.</p>
+                                <a href="https://github.com/Daniel-Rodriguez210">
+                                    <img className="prodigy" src={GitHub} alt="Github"/>
+                                </a>
+                                <a href="https://www.linkedin.com/in/daniel-rodriguez-73690b1b0/">
+                                    <img className="prodigy1"src={LinkedIn} alt="LinkedIn"/>
+                                </a>
+                                <br/>
+                                <a className="resume"href="https://docs.google.com/document/d/1wReEldfwRb5gmopsVun0Wv8mmO5wFa_2IGMPob6-owQ/edit?usp=sharing">Resume</a>
+                                
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
         </div>
     );
   }
